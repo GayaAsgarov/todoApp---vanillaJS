@@ -1,0 +1,173 @@
+:root {
+    --body-color: #EEEEEE;
+    --container-bg: #fff;
+    --title-color: #4F4F4F;
+    --text-color: #000;
+    --inp-border-color: rgb(195, 194, 194);
+    --active-tab-link-color: #1266F1;
+    --tab-link-color: rgba(0, 0, 0, .6);
+    --tab-link-bg: #F4F6F7;
+}
+
+.dark {
+    --body-color: #1f212e;
+    --container-bg: #252a41;
+    --title-color: #8b97c6;
+    --text-color: #fff;
+    --inp-border-color: none;
+    --active-tab-link-color: #8b97c6;
+    --tab-link-color: #fff;
+    --tab-link-bg: #38426d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .container{
+        background-color: var(--container-bg);
+        width: 50%;
+        padding: 20px;
+        border-radius: 10px;
+        max-height: 678.5px;
+        overflow-y: scroll;
+        h1 {
+            text-align: center;
+            color: var(--title-color);
+            margin: 0 0 10px 0;
+        }
+        form{
+            display: flex;
+            justify-content: space-evenly;
+            input {
+                width: 70%;
+                padding: 10px;
+                outline: none;
+                border: 2px solid var(--inp-border-color);
+                border-radius: 5px;
+            }
+            button{
+                font-size: 20px;
+                font-weight: bold;
+                border: none;
+                padding: 9px 10px;
+                border-radius: 10px;
+                background-color: #39C0ED;
+                color: #fff;
+                cursor: pointer;
+                transition: .4s;
+                &:hover{
+                    background: #25809e;
+                }
+            }
+        }
+        .tabs{
+            width: 85%;
+            margin: 20px auto;
+            button{
+                color: var(--tab-link-color);
+                border: none;
+                background: none;
+                padding: 15px 20px;
+                cursor: pointer;
+                transition: .4s;
+                &:hover{
+                    background: var(--tab-link-bg);
+                }
+            }
+            .active{
+                color: var(--active-tab-link-color);
+                border-bottom: 2px solid var(--active-tab-link-color);
+            }
+        }
+        .todos-list{
+            div{
+                display: flex;
+                width: 85%;
+                margin: 20px auto;
+                justify-content: space-around;
+                flex-direction: row;
+                background: #F4F6F7;
+                border-radius: 10px;
+                padding: 10px;
+                p {
+                    font-size: 16px;
+                    width: 50%;
+                    overflow-x: scroll;
+                }
+                button{
+                    font-size: 13px;
+                    font-weight: bold;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    border: none;
+                    color: #fff;
+                    border-radius: 5px;
+                    transition: .4s;
+                }
+                .edit-btn{
+                    background-color: rgb(230, 200, 7);
+                    &:hover{
+                        background-color: rgb(155, 135, 5);
+                    }
+                }
+                .done-btn{
+                    background-color: rgb(3, 194, 3);
+                    &:hover{
+                        background-color: rgb(3, 108, 3);
+                    }
+                }
+                .remove-btn{
+                    background-color: rgb(245, 7, 7);
+                    &:hover{
+                        background-color: rgb(156, 4, 4);
+                    }
+                }
+            }
+            .done{
+                p{
+                    color: rgb(3, 194, 3);
+                    text-decoration: line-through;
+                }
+            }
+        }
+        .tab-content{
+            display: none;
+        }
+        .tab-content-active{
+            display: block;
+        }
+    }
+    .fa-moon {
+        color: var(--title-color);
+        position: absolute;
+        font-size: 44px;
+        top: 3%;
+        right: 3%;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 1210px) {
+    body{
+        .container{
+            .todos-list {
+                div{
+                    flex-direction: column;
+                    button{
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,210 @@
+:root {
+  --body-color: #EEEEEE;
+  --container-bg: #fff;
+  --title-color: #4F4F4F;
+  --text-color: #000;
+  --inp-border-color: rgb(195, 194, 194);
+  --active-tab-link-color: #1266F1;
+  --tab-link-color: rgba(0, 0, 0, .6);
+  --tab-link-bg: #F4F6F7;
+}
+
+.dark {
+  --body-color: #1f212e;
+  --container-bg: #252a41;
+  --title-color: #8b97c6;
+  --text-color: #fff;
+  --inp-border-color: none;
+  --active-tab-link-color: #8b97c6;
+  --tab-link-color: #fff;
+  --tab-link-bg: #38426d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--body-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+body .container {
+  background-color: var(--container-bg);
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 678.5px;
+  overflow-y: scroll;
+}
+
+body .container h1 {
+  text-align: center;
+  color: var(--title-color);
+  margin: 0 0 10px 0;
+}
+
+body .container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .container form input {
+  width: 70%;
+  padding: 10px;
+  outline: none;
+  border: 2px solid var(--inp-border-color);
+  border-radius: 5px;
+}
+
+body .container form button {
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 9px 10px;
+  border-radius: 10px;
+  background-color: #39C0ED;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body .container form button:hover {
+  background: #25809e;
+}
+
+body .container .tabs {
+  width: 85%;
+  margin: 20px auto;
+}
+
+body .container .tabs button {
+  color: var(--tab-link-color);
+  border: none;
+  background: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body .container .tabs button:hover {
+  background: var(--tab-link-bg);
+}
+
+body .container .tabs .active {
+  color: var(--active-tab-link-color);
+  border-bottom: 2px solid var(--active-tab-link-color);
+}
+
+body .container .todos-list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  margin: 20px auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #F4F6F7;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+body .container .todos-list div p {
+  font-size: 16px;
+  width: 50%;
+  overflow-x: scroll;
+}
+
+body .container .todos-list div button {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body .container .todos-list div .edit-btn {
+  background-color: #e6c807;
+}
+
+body .container .todos-list div .edit-btn:hover {
+  background-color: #9b8705;
+}
+
+body .container .todos-list div .done-btn {
+  background-color: #03c203;
+}
+
+body .container .todos-list div .done-btn:hover {
+  background-color: #036c03;
+}
+
+body .container .todos-list div .remove-btn {
+  background-color: #f50707;
+}
+
+body .container .todos-list div .remove-btn:hover {
+  background-color: #9c0404;
+}
+
+body .container .todos-list .done p {
+  color: #03c203;
+  text-decoration: line-through;
+}
+
+body .container .tab-content {
+  display: none;
+}
+
+body .container .tab-content-active {
+  display: block;
+}
+
+body .fa-moon {
+  color: var(--title-color);
+  position: absolute;
+  font-size: 44px;
+  top: 3%;
+  right: 3%;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1210px) {
+  body .container .todos-list div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container .todos-list div button {
+    margin: 10px 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

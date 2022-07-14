@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo App</title>
+    <link rel="stylesheet" href="./sass/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>ToDo App</h1>
+        <form>
+            <input type="text" id="todo" name="todo" placeholder="Enter todo ... ">
+            <button id="add-todo">Add</button>
+        </form>
+        <div class="tabs">
+            <button class="tablink active">ALL</button>
+            <button class="tablink">ACTIVE</button>
+            <button class="tablink">COMPLETED</button>
+        </div>
+        <div id="all" class="todos-list tab-content tab-content-active">
+
+        </div>
+        <div id="active" class="todos-list tab-content">
+            <!-- <h1>Active todos</h1> -->
+        </div>
+        <div id="completed" class="todos-list tab-content">
+            <h1>completed todos</h1>
+        </div>
+    </div>
+    <i class="fa-solid fa-moon"></i>
+    <script src="./index.js"></script>
+</body>
+
+</html>
